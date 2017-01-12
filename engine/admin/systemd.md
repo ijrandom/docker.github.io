@@ -36,11 +36,9 @@ The recommended way is to use a systemd drop-in file (as described in the <a
 target="_blank"
 href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">systemd.unit</a>
 documentation). These are local files named `<something>.conf` in the
-`/etc/systemd/system/docker.service.d` directory. This could also be
-`/etc/systemd/system/docker.service`, which also works for overriding the
-defaults from `/lib/systemd/system/docker.service`.
+`/etc/systemd/system/docker.service.d` directory.
 
-However, if you had previously used a package which had an `EnvironmentFile`
+If you had previously used a package which had an `EnvironmentFile`
 (often pointing to `/etc/sysconfig/docker`) then for backwards compatibility,
 you drop a file with a `.conf` extension into the
 `/etc/systemd/system/docker.service.d` directory including the following:
